@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="76" viewBox="0 0 95 76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="850" y="1241" width="95" height="76" filterUnits="userSpaceOnUse">
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="photos_icon_copy_3" data-name="photos icon copy 3" class="cls-1" d="M901.572,1269.69a14.075,14.075,0,1,0,14.163,14.08A14.116,14.116,0,0,0,901.572,1269.69Zm32.919-20.57H888.356a0.7,0.7,0,0,1-.236,0,4.51,4.51,0,0,1-4.141-2.94,0.067,0.067,0,0,1-.008-0.03l-0.834-2.18a4.659,4.659,0,0,0-4.145-2.97h-6.464a4.667,4.667,0,0,0-4.15,2.97l-0.8,2.1a2,2,0,0,1-.1.25,0.358,0.358,0,0,1-.019.05,4.5,4.5,0,0,1-4.067,2.75,0.467,0.467,0,0,1-.115.01,0.46,0.46,0,0,1-.12-0.01h-2.678a10.509,10.509,0,0,0-10.5,10.45v46.98a10.5,10.5,0,0,0,10.5,10.45h74a10.5,10.5,0,0,0,10.5-10.45v-46.98A10.509,10.509,0,0,0,934.491,1249.12Zm-32.919,56.94a22.29,22.29,0,1,1,22.418-22.29A22.356,22.356,0,0,1,901.572,1306.06Zm30.521-39.39a5.01,5.01,0,1,1,5.038-5.01A5.021,5.021,0,0,1,932.093,1266.67Z" transform="translate(-850 -1241)"/>
+</svg>
