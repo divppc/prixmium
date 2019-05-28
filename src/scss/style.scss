@@ -348,3 +348,79 @@ section.advantages {
     }
   }
 }
+
+section.testimonials {
+  background-color: #e1261c;
+  padding-top: 73px;
+
+  @media (min-width: $tablet) {
+    padding-top: 107px;
+  }
+
+  .feedbacks {
+    display: flex;
+  }
+
+  .feedback {
+    background: #fff;
+    text-align: center;
+    padding: 35px 40px 24px;
+
+    @media (min-width: $tablet) {
+      padding: 55px 35px 40px;
+    }
+
+    .feedback-text {
+      font-size: 15px;
+      color: #242424;
+      font-family: $pt;
+
+      @media (min-width: $tablet) {
+        font-size: 24px;
+      }
+    }
+
+    .feedback-author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .avatar {
+        margin-right: 20px;
+      }
+
+      .author-data {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+
+    @media (min-width: $tablet) {
+      flex-wrap: nowrap;
+      padding: 0;
+    }
+
+    .logo {
+      padding: 5.5% 10%;
+      width: calc(100% / 3);
+
+      @media (min-width: $tablet) {
+        width: calc(100% / 6);
+        padding: 0;
+        height: 148px;
+        display: flex;
+      }
+
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}
