@@ -392,6 +392,20 @@ section.testimonials {
       .author-data {
         display: flex;
         align-items: center;
+        font-weight: bold;
+        font-size: 10px;
+
+        @media (min-width: $tablet) {
+          font-size: 16px;
+        }
+
+        .name {
+          &:after {
+            display: inline-block;
+            content: "-";
+            margin: 0 5px;
+          }
+        }
       }
     }
   }
@@ -421,6 +435,120 @@ section.testimonials {
         display: block;
         margin: auto;
       }
+    }
+  }
+}
+
+footer {
+  background: #242424;
+  color: #fff;
+  text-align: center;
+  padding: 110px 0;
+
+  @media (min-width: $tablet) {
+    padding: 40px;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 40px 80px;
+  }
+
+  .wrapper {
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    @media (min-width: $tablet) {
+      margin-right: 50px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 150px;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .left-side {
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .contacts {
+    font-size: 15px;
+    max-width: 195px;
+    margin: 25px auto 45px auto;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      text-align: left;
+    }
+
+    .address {
+      margin-bottom: 10px;
+    }
+
+    .mail {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      justify-content: flex-end;
+    }
+
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .copyright {
+    font-size: 13px;
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.to-top {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  min-height: 52px;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+
+    i {
+      display: block;
+      transform: rotate(-90deg);
+      font-style: normal;
     }
   }
 }
