@@ -552,3 +552,61 @@ footer {
     }
   }
 }
+
+body.dark {
+  background: #242424;
+  color: #fff;
+
+  .wrapper {
+    padding: 40px 0;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet) {
+      padding: 62px 0;
+    }
+
+    .logo {
+      a {
+        display: inline-block;
+      }
+    }
+
+    .heading {
+      margin: 35px 0 25px 0;
+    }
+
+    .text-data {
+      line-height: 1.4;
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .green-btn {
+    text-align: center;
+    margin-top: 50px;
+
+    a {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      background: #45a142;
+      line-height: 37px;
+      padding: 0 12px;
+      border-radius: 15px;
+
+      &:hover {
+        background: darken(#45a142, 5%);
+      }
+    }
+  }
+}
