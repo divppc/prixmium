@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Client registration form</title>
+    <title>Formulaire de demande d'emploi</title>
   </head>
   <body class="dark">
     <div class="wrapper">
@@ -15,65 +15,73 @@
         </a>
       </div>
       <div class="heading">
-        <h1>Client registration form</h1>
+        <h1>Formulaire de demande d'emploi</h1>
       </div>
       <form>
         <div class="row">
           <input
             type="text"
             name="Name"
-            placeholder="Your name"
+            placeholder="Votre nom"
             data-type="field"
           />
           <input
             type="text"
-            name="Business name"
-            placeholder="Legal Business Name"
-            data-type="field"
-          />
-        </div>
-        <div class="row">
-          <input
-            type="text"
-            name="Billing address"
-            placeholder="Billing address"
+            name="Job title"
+            placeholder="Profession"
             data-type="field"
           />
         </div>
         <div class="row">
           <input
             type="text"
-            name="Shipping address"
-            placeholder="Shipping address"
+            name="Home address"
+            placeholder="Adresse du domicile"
+            data-type="field"
           />
-          <span>* Leave empty if it’s the same as billing</span>
         </div>
         <div class="row">
           <input
             type="text"
-            name="Current suplier"
-            placeholder="Current supliers"
+            name="Experience"
+            placeholder="Années d'expérience professionnelle"
           />
-          <span>* Leave empty if you wish not to mention</span>
+          <span>* Laissez vide si c'est votre premier emploi</span>
+        </div>
+        <div class="row">
+          <input
+            type="text"
+            name="Current employer"
+            placeholder="Votre employeur actuel"
+          />
+          <span>* Laissez vide si vous êtes actuellement au chômage</span>
         </div>
         <div class="row">
           <input
             type="text"
             name="Contact number"
-            placeholder="Contact number"
+            placeholder="Numéro de contact"
             data-type="field"
           />
           <input
             type="email"
             name="email"
-            placeholder="Valid Email Address"
+            placeholder="Adresse e-mail valable"
             data-type="field"
           />
         </div>
         <div class="row">
-          <input type="submit" value="Send" />
+          <input type="submit" value="Envoyer" />
         </div>
       </form>
+      <div class="ss">
+        <div class="text-data">
+          Votre message a été envoyé. Vous recevrez une réponse dans les
+        </div>
+        <div class="green-btn">
+          <a href="/">Retour à la page d'accueil</a>
+        </div>
+      </div>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.4/polyfill.min.js"></script>

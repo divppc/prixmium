@@ -359,6 +359,30 @@ section.testimonials {
 
   .feedbacks {
     display: flex;
+
+    .feedback {
+      margin: 0 -8%;
+    }
+
+    .slick-slide {
+      transition: opacity 0.3s;
+      opacity: 0;
+
+      &.visible {
+        opacity: 0.2;
+      }
+
+      &.slick-current {
+        opacity: 1 !important;
+      }
+
+      &.slick-current {
+        outline: none;
+        position: relative;
+        z-index: 10;
+        z-index: 1;
+      }
+    }
   }
 
   .feedback {
@@ -400,11 +424,17 @@ section.testimonials {
         }
 
         .name {
+          display: flex;
+
           &:after {
             display: inline-block;
             content: "-";
             margin: 0 5px;
           }
+        }
+
+        .role {
+          display: flex;
         }
       }
     }
@@ -675,6 +705,10 @@ form {
         line-height: 26px;
       }
     }
+
+    &.error {
+      border-bottom: 1px solid red;
+    }
   }
 
   span {
@@ -696,5 +730,13 @@ input[type="submit"] {
 
   &:hover {
     background: darken(#45a142, 5%);
+  }
+}
+
+.ss {
+  display: none;
+
+  &.active {
+    display: block;
   }
 }

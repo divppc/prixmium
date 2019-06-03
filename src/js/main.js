@@ -1,12 +1,11 @@
 window.addEventListener("load", () => {
-  document.querySelector(".time") && getWeather();
   const form = document.getElementsByTagName("form")[0];
 
   const validate = fields => {
     let validation = true;
 
     fields.forEach(f => {
-      if (f.value.length === 0 || (f.type === "checkbox" && !f.checked)) {
+      if (f.value.length === 0) {
         f.classList.add("error");
         validation *= false;
       } else {
@@ -39,50 +38,53 @@ window.addEventListener("load", () => {
       }
     });
 
-  const topBtn = document.querySelector(".top-btn span");
+  const topBtn = document.querySelector(".to-top a");
   topBtn &&
-    topBtn.addEventListener("click", () => {
+    topBtn.addEventListener("click", e => {
+      e.preventDefault();
       window.scroll({ top: 0, left: 0, behavior: "smooth" });
     });
 
-  $(".advantages").slick({
+  $(".feedbacks").slick({
     mobileFirst: true,
     centerMode: true,
     arrows: false,
-    centerPadding: "10%",
-    slidesToShow: 1,
+    centerPadding: "35%",
+    // infinite: false,
+    focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 768,
-        settings: "unslick"
+        breakpoint: 992,
+        settings: {
+          centerPadding: "38%"
+        }
       }
     ]
   });
+  const sliderItems = Array.from(document.querySelectorAll(".feedback"));
 
-  const sliderItems = Array.from(document.querySelectorAll(".adv"));
+  const showSlides = currentSlide => {
+    const prevIndex = currentSlide - 1;
+    const nextIndex = currentSlide + 1;
 
-  sliderItems.forEach(el => {
-    el.addEventListener("click", e => {
+    sliderItems.forEach(el => {
       const index = el.getAttribute("data-slick-index");
-      $(".advantages").slick("slickGoTo", index);
+      if (+index === prevIndex || +index === nextIndex) {
+        el.classList.add("visible");
+      } else {
+        el.classList.remove("visible");
+      }
     });
+  };
+
+  showSlides(0);
+
+  $(".feedbacks").on("beforeChange", function(
+    event,
+    slick,
+    currentSlide,
+    nextSlide
+  ) {
+    showSlides(nextSlide);
   });
 });
-
-const getWeather = async () => {
-  const w = fetch(
-    "https://api.openweathermap.org/data/2.5/find?q=Beirut&units=metric&appid=9da32aaafbf99f43f7d52b9381cd91c5"
-  ).then(r => r.json());
-  const { list } = await w;
-  const currentWeather = Math.ceil(list[0].main.temp);
-  const icon = list[0].weather[0].icon;
-
-  currentWeather && icon && setWeather(currentWeather, icon);
-};
-
-const setWeather = (temp, icon) => {
-  const tempHolder = document.querySelector(".temp-holder");
-  const iconHolder = document.querySelector(".icon-holder");
-  tempHolder.innerHTML = `${temp} ° C`;
-  iconHolder.innerHTML = `<img src="https://openweathermap.org/img/w/${icon}.png" />`;
-};
