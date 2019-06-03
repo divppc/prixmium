@@ -32,6 +32,7 @@ window.addEventListener("load", () => {
           if (http.readyState == 4 && http.status == 200) {
             form.classList.add("hidden");
             document.querySelector(".ss").classList.add("active");
+            document.getElementsByTagName("h1")[0].innerHTML = "Success";
           }
         };
         http.send(SendData);
@@ -77,7 +78,7 @@ window.addEventListener("load", () => {
     });
   };
 
-  showSlides(0);
+  sliderItems.length && showSlides(0);
 
   $(".feedbacks").on("beforeChange", function(
     event,
